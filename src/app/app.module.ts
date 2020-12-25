@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { FormsModule } from "@angular/forms";
 import { DropdownModule } from "primeng/dropdown";
 import { MultiSelectModule } from "primeng/multiselect";
+import { ButtonModule } from "primeng/button";
 
 import { AppComponent } from "./app.component";
 
@@ -13,10 +14,10 @@ import { AppComponent } from "./app.component";
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-
     // PrimeNG
-    DropdownModule,    
-    MultiSelectModule
+    DropdownModule,
+    MultiSelectModule,
+    ButtonModule
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
