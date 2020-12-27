@@ -16,7 +16,8 @@ interface City {
 })
 export class AppComponent {
   cities: City[];
-  selectedCity: City[];
+  selectedCity: City[]=[];
+  error:boolean=false;
 
   constructor() {
     this.cities = [
@@ -27,7 +28,12 @@ export class AppComponent {
       { name: "Paris", code: "PRS" }
     ];
   }
-  submit(e: any) {
+  Submit(e: any) {
+    if(!this.selectedCity.length){
+      this.error=true;
+      return;
+    }
+    this.error=false;
     console.log(
       this.selectedCity.map(i =>
         i.name.includes(" ") ? i.name.split(" ").join("_") : i.name

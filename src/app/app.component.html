@@ -1,5 +1,6 @@
 <p-multiSelect [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" optionValue="code">
 </p-multiSelect>
+<p *ngIf="error">Please select a city</p>
 <p>
-	<button pButton type="button" label="Submit" class="p-button-text"></button>
+	<button pButton label="Submit" class="p-button-text"(click)="Submit($event)"></button>
 </p>
